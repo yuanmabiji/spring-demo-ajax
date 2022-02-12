@@ -6,7 +6,13 @@
 	<groupId>com.example</groupId>
 	<artifactId>spring-demo-ajax</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>spring-demo-sondomain1</module>
+		<module>spring-demo-sondomain2</module>
+		<module>spring-demo-ajax_</module>
+		<module>spring-demo-cookie</module>
+	</modules>
+    <packaging>pom</packaging>
 
 	<name>spring-demo-ajax</name>
 	<description>Demo project for Spring Boot</description>
