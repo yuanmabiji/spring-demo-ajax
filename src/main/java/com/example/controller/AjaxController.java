@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.util.CookieUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -23,11 +24,6 @@ import com.example.domain.DataSet;
 @Controller
 public class AjaxController {
 	private static Logger logger = LoggerFactory.getLogger(AjaxController.class);
-	
-	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String home(){
-		return "index";
-	}
 
 	// Test Case - 1
 	@ResponseBody
