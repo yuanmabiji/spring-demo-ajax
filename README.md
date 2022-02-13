@@ -19,3 +19,7 @@
 TODO form表单测试跨域还未做
 
 TODO 参考：https://www.imooc.com/learn/947 和 https://github.com/yuanmabiji/AjaxDemo
+
+
+注意：form表单或a标签等是不涉及跨域的。
+参考：https://www.cnblogs.com/eret9616/p/12945549.html或https://class.imooc.com/course/qadetail/220906
