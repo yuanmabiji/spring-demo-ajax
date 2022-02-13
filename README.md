@@ -8,7 +8,7 @@
 
 ### spring-demo-sondomain1和spring-demo-sondomain2
 这两个module主要主要用来验证两个项目设置父域名，此时可以浏览器请求、ajax请求等可以共用父域的cookie；
-此外还有服务端删除cookie和浏览器Js删除cookie的功能。
+此外spring-demo-sondomain2还有服务端删除cookie和浏览器Js删除cookie的功能。
 
 **注意：** 浏览器Js不能增删改查跨域cookie的值。比如在a.bb.com的调试页面（F12）不能增删改查c.bb.com这个域名的cookie
 

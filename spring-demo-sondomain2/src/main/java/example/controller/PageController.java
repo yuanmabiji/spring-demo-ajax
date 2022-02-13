@@ -8,9 +8,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class PageController {
-	private static Logger logger = LoggerFactory.getLogger(PageController.class);
+
 	@RequestMapping(value="/cookie", method=RequestMethod.GET)
 	public String cookie(){
 		return "cookie";
+	}
+
+	@RequestMapping(value="/crossOrign", method=RequestMethod.GET)
+	public String crossOrign(){
+		return "crossOrign";
 	}
 }

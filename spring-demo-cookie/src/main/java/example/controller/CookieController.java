@@ -32,10 +32,19 @@ public class CookieController {
 		return "cookie";
 	}
 
-	@RequestMapping(value="/addCookie2")
+	/**
+	 * 前台请求：http://server.smart-sso.com:8081/testCrossDomainSetCookie
+	 * 浏览器告警：This Set-Cookie was blocked because its Domain attribute was invalid with regards to the current host url.
+	 * 因为浏览器是在server.smart-sso.com上发起请求，你却要设置域为demo.smart-sso.com（不同domain）的cookie，所以可以返回cookie给浏览器，但浏览器拒绝设置cookie
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@RequestMapping(value="/testCrossDomainSetCookie")
 	public String addCookie2(HttpServletRequest request,HttpServletResponse response){
-		Cookie cookie1 = new Cookie("name","eric");
-		response.addCookie(cookie1);
+		Cookie cookie = new Cookie("testCrossDomainSetCookie","eric");
+		cookie.setDomain("demo.smart-sso.com");
+		response.addCookie(cookie);
 		return "cookie";
 	}
 
