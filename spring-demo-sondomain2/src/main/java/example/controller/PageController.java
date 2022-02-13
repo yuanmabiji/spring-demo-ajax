@@ -18,4 +18,10 @@ public class PageController {
 	public String crossOrign(){
 		return "crossOrign";
 	}
+
+	//loginLogout
+	@RequestMapping(value="/loginLogout", method=RequestMethod.GET)
+	public String loginLogout(){
+		return "loginLogout";
+	}
 }

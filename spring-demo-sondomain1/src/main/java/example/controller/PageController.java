@@ -13,4 +13,10 @@ public class PageController {
 	public String cookie(){
 		return "cookie";
 	}
+
+	//loginLogout
+	@RequestMapping(value="/loginLogout", method=RequestMethod.GET)
+	public String loginLogout(){
+		return "loginLogout";
+	}
 }
