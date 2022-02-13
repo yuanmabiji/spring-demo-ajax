@@ -17,3 +17,5 @@
 2. 分别访问http://demo.smart-sso.com:8082/cookie和http://demo2.smart-sso.com:8083/cookie
 
 TODO form表单测试跨域还未做
+
+TODO 参考：https://www.imooc.com/learn/947 和 https://github.com/yuanmabiji/AjaxDemo
