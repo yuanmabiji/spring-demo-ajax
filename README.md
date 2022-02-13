@@ -15,3 +15,5 @@
 使用：
 1. Host文件设置：127.0.0.1 demo.smart-sso.com 和 127.0.0.1 demo2.smart-sso.com
 2. 分别访问http://demo.smart-sso.com:8082/cookie和http://demo2.smart-sso.com:8083/cookie
+
+TODO form表单测试跨域还未做

@@ -18,7 +18,7 @@ import java.util.List;
  * 测试页面：http://127.0.0.1:8080/cookie
  * 总结论：
  * 1，服务端返回localhost域名（因为没有.）的cookie，浏览器不会保存；用127.0.0.1或带点（.）的域名可以
- * 2，不同形式(get或Post)的ajax请求或表单请求等只要cookie域名符合请求url都会带去服务端
+ * 2，不跨域情况下，不同形式(get或Post)的ajax请求或表单请求等只要cookie域名符合请求url都会带去服务端
  * 3，不同形式(get或Post)的ajax请求或表单请求等，服务端返回的cookie，浏览器同样会保存。
  */
 @Controller
@@ -50,7 +50,7 @@ public class CookieController {
 
 
 	/**
-     * 结论：对于是localhost的ajax的get请求，服务端设置cookie，浏览器不会保存，
+     * 结论1：对于是localhost的ajax的get请求，服务端设置cookie，浏览器不会保存，
 	 * 浏览器报错提示：This attempt to set a cookie via a Set-Cookie header was blocked due to user preferences
 		但127.2.0.7的http请求浏览器却可以保存，然后不同方式的ajax请求也会带着cookie过去, TODO 为啥localhost不行呢？
 	 * 答：今天在本地调试代码的时候，再域名中使用localhost，结果一直调试不成功，最后发现在登录时，setcookie()没有设置进去
@@ -66,6 +66,8 @@ public class CookieController {
 	 *  解决：直接使用127.0.0.1      或者    自己定义一个域名，在host中做映射
 	 *
 	 *  参考：https://www.cnblogs.com/nww57/p/5113329.html
+	 *
+	 *  结论2：不跨域情况下，不同形式(get或Post)的ajax请求或表单请求等只要cookie域名符合请求url都会带去服务端
 	 *  @param username
      * @param password
      * @return
