@@ -105,29 +105,6 @@
 	function responseError(data){
 		_response.html(data.responseText);
 	}
-
-	// var token = localStorage.getItem("token");
-	// ajax全局拦截器，注意：这个全局拦截器只作用于这个script，对于cookie2.html的ajax请求无效果，
-	// TODO 如何才能使得所有页面的ajax请求有效果呢？
-	// 1，所有页面引入这个js脚本？
-	// 2，尝试其他ajax全局事件函数：.ajaxStart(), .ajaxStop(), .ajaxComplete(), .ajaxError(), .ajaxSuccess(), .ajaxSend()？ 参考 https://api.jquery.com/jQuery.ajaxSetup/#jQuery-ajaxSetup-options
-	// 3，封装ajax请求，类似axios的请求和响应拦截器？
-	$.ajaxSetup({
-		dataType: "json",
-		cache: false,
-		headers: {
-			"ajaxtoken": "ajaxtoken_value"
-		},
-		xhrFields: {
-			withCredentials: true
-		},
-		complete: function(xhr) { // 【重要】这个相当于ajax的响应拦截器。
-			//token过期，则跳转到登录页面
-			if(xhr.responseJSON.code == 401){
-				parent.location.href = baseURL + 'login.html';
-			}
-		}
-	});
 </script>
 </body>
 </html>

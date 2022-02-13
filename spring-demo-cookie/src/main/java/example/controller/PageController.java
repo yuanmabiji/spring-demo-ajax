@@ -13,4 +13,9 @@ public class PageController {
 	public String cookie(){
 		return "cookie";
 	}
+
+	@RequestMapping(value="/cookie2", method=RequestMethod.GET)
+	public String cookie2(){
+		return "cookie2";
+	}
 }
